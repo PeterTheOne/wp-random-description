@@ -55,8 +55,12 @@ function wp_random_description_options_page() {
         <form action="options.php" method="post">
             <?php settings_fields('wp_random_description_options'); ?>
             <?php do_settings_sections('wp_random_description'); ?>
+
+
+
             <p class="submit">
-                <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_attr_e('Save Changes'); ?>"  />
+                <input type="text" name="text" />
+                <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_attr_e('Add'); ?>"  />
             </p>
         </form>
     </div>
@@ -102,7 +106,7 @@ function wp_random_description_admin_init() {
     register_setting('wp_random_description_options', 'wp_random_description_options', 'wp_random_description_options_validate');
 
     add_settings_section('wp_random_description_section', 'Random Descriptions', 'wp_random_description_section_text', 'wp_random_description');
-    add_settings_field('wp_random_description_table', 'SpaceAPI URL', 'wp_random_description_table', 'wp_random_description', 'wp_random_description_section');
+    add_settings_field('wp_random_description_table', 'Something something', 'wp_random_description_table', 'wp_random_description', 'wp_random_description_section');
 }
 
 // validate our options
